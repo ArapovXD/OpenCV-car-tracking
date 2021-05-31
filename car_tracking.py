@@ -2,8 +2,8 @@ import cv2 as cv
 
 cap = cv.VideoCapture("video.mp4")
 
-object_detector_one = cv.createBackgroundSubtractorMOG2(history=100, varThreshold=50)
-object_detector_two = cv.createBackgroundSubtractorMOG2()
+object_detector_one = cv.createBackgroundSubtractorMOG2(history=100, varThreshold=30)
+object_detector_two = cv.createBackgroundSubtractorMOG2(history=100, varThreshold=30)
 
 while True:
     ret, frame = cap.read()
